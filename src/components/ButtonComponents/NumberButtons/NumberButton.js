@@ -1,20 +1,18 @@
 import React from "react";
 
-import "./styles.css"
 
-export const NumberButton = (props) => {
-  function handleCXlickEvent(){
-    props.consoleLog(props.number)
-  }
+
+const NumberButton = (props) => {
+  
+    console.log(props);
+  
   return (
     <>
-      {/* Display a button element rendering the data being passed down from the parent container on props */
-        <button
-         className="number_button"
-          onClick={() => props.setDisplayValue(props.number)}
-        >
-          {props.number}
-        </button>}
+    <button onClick = {() => props.addNumber(props.text)}>
+      {props.text}
+    </button>
+      {/* Display a button element rendering the data being passed down from the parent container on props */}
     </>
   );
 };
+export default NumberButton; 
